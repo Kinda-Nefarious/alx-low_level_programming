@@ -8,22 +8,17 @@
 
 int main(void)
 {
+	long x, maxf;
 	long number = 612852475143;
-	int inc;
+	double square = sqrt(number);
 
-	while (inc++ < number / 2)
+	for (x = 1; x <= square; x++)
 	{
-		if (number % inc == 0)
+		if (number % x == 0)
 		{
-			number /= 2;
-			continue;
-		}
-
-		for (inc = 3; inc < number / 2; inc += 2)
-		{
-			if (number % inc == 0)
-				number /= inc;
-
+			maxf = number / x;
 		}
 	}
+	printf("%ld\n", maxf);
+	return (0);
 }
